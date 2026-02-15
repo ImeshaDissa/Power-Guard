@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const app = require('./src/app');
-const { port, mongoUri } = require('./src/config/env');
+import mongoose from 'mongoose';
+import app from './src/app.js';
+import { port, mongoUri } from './src/config/env.js';
 
 mongoose.connect(mongoUri).then(() => {
     console.log('DB connected');
