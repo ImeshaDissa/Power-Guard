@@ -19,6 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 const tariffRoutes = require('./routes/tariffRoutes');
 app.use('/api/v1/tariffs', tariffRoutes);
 
+//budget routes 
+const budgetRoutes = require('../routes/budgetRoutes');
+app.use('/api/v1/budgets', budgetRoutes);
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'Server is running' });
